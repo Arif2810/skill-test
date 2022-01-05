@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    function solution(num){
+      var result = 0;
+      var array = [];
+  
+      // Perulangan kelipatan 3 dan 5
+      for(var i = 1; i < num; i++){
+          if((i % 3 == 0)|| (i % 5 == 0)){
+              result += i;
+              array.push(i);
+          }
+      }
+      
+      document.write(result +" = " + array)
+    }
+
+    // Menguji function
+    solution(20);
+
+
+  </script>
+  
+</body>
+</html>
