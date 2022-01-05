@@ -1,0 +1,6 @@
+Keterangan:
+Halaman awal yang ditampilkan adalah halaman login, dimana user yang sudah menjadi member bisa melakukan login dengan cara memasukkan username dan password.
+sistem akan memvalidasi username dan password yang dimasukkan oleh member, jika valid akan diarahkan ke halaman dashboard, namun jika tidak valid akan diarahkan kembali ke halaman login.
+Pada halaman login juga terdapat link registrasi bagi user yang belum menjadi member, jika link registrasi di klik maka akan diarahkan ke halaman registrasi.
+User dapat melakukan registrasi pada halaman registrasi dengan cara memasukkan username, password, dan konfirmasi password. Sistem akan menyimpan username dan password ke database, selanjutnya tampilan akan diarahkan ke halaman login.
+User yang tidak ingin registrasi dapat login dengan menggunakan akun google maupun akun facebook. Facebook dan google akan mengautentifikasi akun, jika terautentifikasi maka akan diarahkan ke halaman dashboar.
