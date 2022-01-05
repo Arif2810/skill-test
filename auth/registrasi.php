@@ -6,6 +6,7 @@ if(isset($_POST["register"])){
     echo "<script>
             alert('User baru berhasil ditambahkan');
           </script>";
+    header("Location: login.php");
   }
   else{
     echo mysqli_error($connect);
