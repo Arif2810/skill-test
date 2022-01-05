@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    // Program Javascript untuk mencetak jumlah maksimum
+    // dari himpunan digit angka tertentu
+      
+    // Function untuk mencetak angka maksimum
+    function maxRedigit(num)
+    {
+      // menyimpan jumlah array
+      let count = new Array(10);
+      for(let i=0; i<count.length; i++)
+      {
+        count[i]=0;
+      }
+
+      // Jika num kurang dari sama dengan null
+      if(num <= 0){
+        return 0;
+      }
+      
+      // Mengkonversi angka ke String
+      let str = num.toString();
+
+      // Jika ada nomor yang sama
+      if(str[0] == str[1] || str[1] == str[2] ){
+        return 0;
+      }
+      
+      // Meng-update array hitungan
+      for(let i=0; i < str.length; i++){
+        count[str[i]-'0']++;
+      }
+      
+      // Menyimpan angka akhir
+      let result = 0, multiplier = 1;
+      
+      // Menghitung jumlah maksimum
+      for(let i = 0; i < 10; i++){
+        while (count[i] > 0){
+          result = result + (i * multiplier);
+          count[i]--;
+          multiplier = multiplier * 10;
+        }
+      }
+      
+      return result;
+    }
+    
+    // Menguji fungsi
+    let num = 123;
+    document.write(maxRedigit(num));
+	
+
+  </script>
+</body>
+</html>
